@@ -51,6 +51,7 @@ class DogCat(data.Dataset):
         else:
             self.imgs = imgs[int(0.7*imgs_num):]
 
+        # https://zhuanlan.zhihu.com/p/476220305
         if transforms is None:
             # 数据转换操作 测试集 验证集 和训练集的转换有所区别
             normalize = T.Normalize(mean=[0.485, 0.456, 0.406],
